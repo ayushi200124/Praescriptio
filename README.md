@@ -1,5 +1,8 @@
 # Praescriptio
 Final Year Project
+Model Classification: https://drive.google.com/file/d/1D12RTGCWFYKQ-IcELjUUCth0obzqfu4m/view?usp=sharing
+
+Model Segmentation: https://drive.google.com/file/d/1ox0f0TkTPpnCrzWrs_AAluTJDsxwIzpo/view?usp=sharing
 
 https://user-images.githubusercontent.com/79920441/173737365-4b05999c-6510-47ae-b8f1-275b8ac80a67.mp4
 
