@@ -1,0 +1,138 @@
+absl-py==1.0.0
+astunparse==1.6.3
+backcall==0.2.0
+beautifulsoup4==4.11.1    
+blis==0.7.7
+Bottleneck==1.3.4
+cachetools==5.0.0
+catalogue==2.0.7
+certifi==2021.10.8        
+cffi==1.15.0
+charset-normalizer==2.0.12
+click @ file:///C:/ci/click_1646038595831/work
+cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
+colorama==0.4.4
+cycler==0.11.0
+cymem==2.0.6
+cytoolz==0.11.0
+dask @ file:///tmp/build/80754af9/dask-core_1602083700509/work
+decorator==5.0.9
+distro==1.7.0
+dnspython==2.2.1
+dominate==2.6.0
+email-validator==1.2.1
+fastai==1.0.52
+fastprogress==1.0.2
+Flask @ file:///tmp/build/80754af9/flask_1634118196080/work
+Flask-Bootstrap==3.3.7.1
+Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.1
+flatbuffers==2.0
+fonttools==4.31.2
+gast==0.5.3
+gevent==21.12.0
+google-auth==2.6.2
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+greenlet==1.1.2
+grpcio==1.44.0
+gunicorn==20.1.0
+h5py==3.6.0
+idna==3.3
+imagecodecs @ file:///C:/ci/imagecodecs_1635511087451/work
+imageio==2.16.1
+importlib-metadata==4.11.3
+ipython==7.24.0
+ipython-genutils==0.2.0
+itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
+jedi==0.18.0
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1635780242639/work
+joblib==1.1.0
+keras==2.8.0
+Keras-Preprocessing==1.1.2
+kiwisolver==1.4.0
+langcodes==3.3.0
+libclang==13.0.0
+Markdown==3.3.6
+MarkupSafe @ file:///C:/ci/markupsafe_1621528502553/work
+matplotlib==3.5.1
+matplotlib-inline==0.1.2
+mkl-fft==1.3.1
+mkl-random @ file:///C:/ci/mkl_random_1626186184308/work
+mkl-service==2.4.0
+murmurhash==1.0.6
+mysql-connector-python==8.0.25
+networkx @ file:///tmp/build/80754af9/networkx_1598376031484/work
+numexpr==2.8.1
+numpy==1.22.3
+nvidia-ml-py3==7.352.0
+oauthlib==3.2.0
+opencv-contrib-python==4.5.5.64
+opencv-python==4.5.5.64
+opt-einsum==3.3.0
+packaging==21.3
+pandas==1.4.1
+parso==0.8.2
+pathy==0.6.1
+pickleshare==0.7.5
+Pillow==9.0.1
+preshed==3.0.6
+prompt-toolkit==3.0.18
+protobuf==3.19.4
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.21
+pydantic==1.8.2
+Pygments==2.9.0
+PyMySQL==1.0.2
+pyparsing==3.0.7
+python-dateutil==2.8.2
+python-dotenv==0.20.0
+pytz==2022.1
+PyWavelets @ file:///C:/ci/pywavelets_1648728084106/work
+PyYAML==6.0
+requests==2.27.1
+requests-oauthlib==1.3.1
+rsa==4.8
+scikit-build==0.13.1
+scikit-image @ file:///C:/ci/scikit-image_1648214340990/work
+scikit-learn==1.0.2
+scipy==1.8.0
+SimpleITK==2.1.1
+six==1.16.0
+smart-open==5.2.1
+soupsieve==2.3.2.post1
+spacy==3.2.4
+spacy-legacy==3.0.9
+spacy-loggers==1.0.2
+SQLAlchemy==1.4.31
+srsly==2.4.3
+tensorboard==2.8.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.8.0
+tensorflow-io-gcs-filesystem==0.24.0
+termcolor==1.1.0
+tf-estimator-nightly==2.8.0.dev2021122109
+thinc==8.0.15
+threadpoolctl==3.1.0
+tifffile @ file:///tmp/build/80754af9/tifffile_1603273710380/work
+toolz @ file:///tmp/build/80754af9/toolz_1601054250827/work
+torch==1.11.0
+torchvision==0.12.0
+tqdm==4.64.0
+traitlets==5.0.5
+typer==0.4.1
+typing==3.7.4.3
+typing_extensions==4.1.1
+urllib3==1.26.9
+visitor==0.1.3
+wasabi==0.9.1
+wcwidth==0.2.5
+Werkzeug==2.0.3
+wincertstore==0.2
+wrapt==1.14.0
+WTForms==3.0.1
+zipp==3.7.0
+zope.event==4.5.0
+zope.interface==5.4.0
