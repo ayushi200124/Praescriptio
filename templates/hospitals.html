@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-hospitals {% endblock title %}
+{% block body %}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Doctors</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Hospitals</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Upcoming Pojects</p>
+                <h1>Hospitals we aim to work at!</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/ruby.jpg')}} alt="" width="1000" height="600">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Ruby General Hospital</h5>
+                            <p class="text-primary">Rating-4.6</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://www.rubyhospital.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/MyBcgIzCNu8"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/appolo.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Apollo Hospital</h5>
+                            <p class="text-primary">Rating-4.5</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://kolkata.apollohospitals.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/DjvgRJ_XR34"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/ils.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>ILS Hospital</h5>
+                            <p class="text-primary">Rating-4.3</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="http://www.ilshospitals.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/7WmQAt04nI4"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/pearless.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Pearless Hospital</h5>
+                            <p class="text-primary">Rating-4.0</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="http://www.peerlesshospital.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/1wLqMwIfMuk"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/amri.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Amri Hospital</h5>
+                            <p class="text-primary">Rating-4.2</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WButKkH1ZLX-YoLZmcsxPkyEPaUqyQ:1648210080367&q=list+of+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiT3euCneH2AhWoyIsBHWm3ABwQjGp6BAgiEAE&biw=1536&bih=735&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="http://www.amrihospitals.in/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/zein2QsW-8w"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/fortis.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Fortis Hospital</h5>
+                            <p class="text-primary">Rating-4.1</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WButKkH1ZLX-YoLZmcsxPkyEPaUqyQ:1648210080367&q=list+of+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiT3euCneH2AhWoyIsBHWm3ABwQjGp6BAgiEAE&biw=1536&bih=735&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://www.fortiskolkata.com/about-us/fortis-hospital-anandapur?utm_source=google-gmb&utm_medium=gmb-seo-url&utm_campaign=FHL-gmb"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/s8-NdrJ9ch4"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/cmri.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>CMRI Hospital</h5>
+                            <p class="text-primary">Rating-4.5</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WButKkH1ZLX-YoLZmcsxPkyEPaUqyQ:1648210080367&q=list+of+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiT3euCneH2AhWoyIsBHWm3ABwQjGp6BAgiEAE&biw=1536&bih=735&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://cmri.ckbirlahospitals.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/0FqUd4ZSz2g"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/manipal.jpg')}} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Manipal Hospital</h5>
+                            <p class="text-primary">Rating-4.4</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WButKkH1ZLX-YoLZmcsxPkyEPaUqyQ:1648210080367&q=list+of+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiT3euCneH2AhWoyIsBHWm3ABwQjGp6BAgiEAE&biw=1536&bih=735&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://www.manipalhospitals.com/saltlake/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/y3uHL3WNpIg"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    {% endblock body %}

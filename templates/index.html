@@ -1,0 +1,496 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-Home {% endblock title %}
+{% block body %}
+<!-- Header Start -->
+    <div class="container-fluid header bg-primary p-0 mb-5">
+        <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-lg-6 p-5 wow fadeIn" data-wow-delay="0.1s">
+                <h1 class="display-4 text-white mb-5">Welcome To Prescriptio!</h1>
+                <div class="row g-4">
+                    <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">4</h2>
+                            <p class="text-light mb-0">Models</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">12</h2>
+                            <p class="text-light mb-0">Data Sets</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">10</h2>
+                            <p class="text-light mb-0">Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="owl-carousel header-carousel">
+                    <div class="owl-carousel-item position-relative">
+                        <img class="img-fluid" src={{ url_for('static', filename = 'img/carousel-1.jpg') }} alt="">
+                        <div class="owl-carousel-text">
+                        </div>
+                    </div>
+                    <div class="owl-carousel-item position-relative">
+                        <img class="img-fluid" src={{ url_for('static', filename = 'img/carousel-2.jpg') }} alt="">
+                        <div class="owl-carousel-text">
+                        </div>
+                    </div>
+                    <div class="owl-carousel-item position-relative">
+                        <img class="img-fluid" src={{ url_for('static', filename = 'img/carousel-3.jpg') }} alt="">
+                        <div class="owl-carousel-text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src={{ url_for('static', filename='img/about-1.jpg') }} alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src={{ url_for('static', filename='img/about-2.jpg') }} alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">About Us</p>
+                    <h1 class="mb-4">Check Your Symptoms!</h1>
+                    <p class="text-black mb-4 pb-2 ">If you have developed certain symptoms which you are worried about and want to check if you are doing good, just mention 5 of your prominent symptoms and we will predict your health problems for you!!</p>
+                    <form name="SymptomForm" id="SymForm" method="POST" action=/disease>
+                        <div class="form-group">
+                          <label for="Symptom1" align="left">Symptom1</label>
+                          <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom1">
+                          <datalist id="symp">
+                              {% for symp in symptoms %}
+                              <option value= "{{symp}}">{{symp}}</option>
+                            {% endfor %}
+                          </datalist>
+                    
+                          <label for="Symptom2" align="left">Symptom2</label>
+                          <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom2">
+                          <datalist id="symp">
+                              {% for symp in symptoms %}
+                              <option value= "{{symp}}">{{symp}}</option>
+                            {% endfor %}
+                          </datalist>
+                    
+                          <label for="Symptom3" align="left">Symptom3</label>
+                          <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom3">
+                          <datalist id="symp">
+                              {% for symp in symptoms %}
+                              <option value= "{{symp}}">{{symp}}</option>
+                            {% endfor %}
+                          </datalist>
+                    
+                          <label for="Symptom4" align="left">Symptom4</label>
+                          <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom4">
+                          <datalist id="symp">
+                              {% for symp in symptoms %}
+                              <option value= "{{symp}}">{{symp}}</option>
+                            {% endfor %}
+                          </datalist>
+                    
+                          <label for="Symptom5" align="left">Symptom5</label>
+                          <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom5">
+                          <datalist id="symp">
+                              {% for symp in symptoms %}
+                              <option value= "{{symp}}">{{symp}}</option>
+                            {% endfor %}
+                          </datalist>
+                    
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 mt-3" ; name=form>Check</button>
+                    </form>
+                    <!-- <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+<!--Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Models</p>
+            <h1>Health Care Solutions</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-medkit text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Malaria</h4>
+                    <p class="mb-4">Check if you are infected with Malaria. You will need the image of your Blood Cells which you can collect along with your lab reports.</p>
+                    <a class="btn" href="maleria"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-x-ray text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Brain Tumor</h4>
+                    <p class="mb-4">Check if you are having a Brain Tumor. You will need a MRI report of your patient collected from the lab.</p>
+                    <a class="btn" href="brain"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-brain text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Covid-19</h4>
+                    <p class="mb-4">Check if you are infected with Covid-19 or is it just pneumonia. You will need a Chest X-Ray report.</p>
+                    <a class="btn" href="covid"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div>
+            </div>
+           <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-ambulance text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Skin Cancer</h4>
+                    <p class="mb-4">Check what are your chances of having breast cancer.</p>
+                    <a class="btn" href="skin"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div> 
+            </div> -->
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-heartbeat text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Thyroid</h4>
+                    <p class="mb-4">Check if you are having brain tumor.</p>
+                    <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-light rounded h-100 p-5">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 65px; height: 65px;">
+                        <i class="fa fa-vials text-primary fs-4"></i>
+                    </div>
+                    <h4 class="mb-3">Polycistic Ovary Syndrome</h4>
+                    <p class="mb-4">Check if you are having melanoma.</p>
+                    <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-wheelchair text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Kidney</h4>
+                        <p class="mb-4">Check your risks of kidney failure.</p>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-tooth text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Liver</h4>
+                        <p class="mb-4">Check if you have liver cirrosis.</p>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                            style="width: 65px; height: 65px;">
+                            <i class="fa fa-stethoscope text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Heart</h4>
+                        <p class="mb-4">Are you at the risk of heart attack?</p>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
+                        <h1 class="text-white mb-4  ">Why Use This Application?</h1>
+                        <p class="text-white mb-4 pb-2 ">Web-Based, end-to-end Data Science Project that uses  well known Machine Learning and Deep Learning algorithms to be accessible at your fingertips.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-user-md text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Accurate</p>
+                                        <h5 class="text-white mb-0">Results</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Quality</p>
+                                        <h5 class="text-white mb-0">User-Experience</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-comment-medical text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Positive</p>
+                                        <h5 class="text-white mb-0">Feedbacks</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-headphones text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Completely</p>
+                                        <h5 class="text-white mb-0">Free of Cost</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src={{ url_for('static', filename='img/feature.jpg') }} style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
+                <h1>Hospitals we aim to work with.</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/team-1.jpg') }} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Ruby General Hospital</h5>
+                            <p class="text-primary">Rating-4.6</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://www.rubyhospital.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/MyBcgIzCNu8"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/team-2.jpg') }} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Apollo Hospitals</h5>
+                            <p class="text-primary">Rating-4.5</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="https://kolkata.apollohospitals.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/DjvgRJ_XR34"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/team-3.jpg') }} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>ILS Hospitals</h5>
+                            <p class="text-primary">Rating-4.3</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="http://www.ilshospitals.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/7WmQAt04nI4"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={{ url_for('static', filename='img/team-4.jpg') }} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Peerless Hospital</h5>
+                            <p class="text-primary">Rating-4.0</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.google.com/search?tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APq-WBtjrl9dRwVVcAwUhvnong4a3aok0w:1648180229175&q=4+famous+hospitals+in+kolkata&rflfq=1&num=10&sa=X&ved=2ahUKEwiOzNforeD2AhUPwjgGHVa1CmgQjGp6BAghEAE&biw=1536&bih=792&dpr=1.25#"><i class="fab fa-accessible-icon"></i></a>
+                                <a class="btn btn-square" href="http://www.peerlesshospital.com/"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-square" href="https://youtu.be/1wLqMwIfMuk"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                    <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Call Us Now</p>
+                            <h5 class="mb-0">+012 345 6789</h5>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Mail Us Now</p>
+                            <h5 class="mb-0">info@example.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;">
+                                        <option selected>Choose Doctor</option>
+                                        <option value="1">Doctor 1</option>
+                                        <option value="2">Doctor 2</option>
+                                        <option value="3">Doctor 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text"
+                                            class="form-control border-0 datetimepicker-input"
+                                            placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text"
+                                            class="form-control border-0 datetimepicker-input"
+                                            placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0" rows="5" placeholder="Describe your problem"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit"><a href="{{ url_for('contact') }}"><em style="color: white">Book Appointment</em></a></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Reviews</p>
+                <h1>What My Mentors Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src={{ url_for('static', filename='img/testimonial-1.png')}} style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Pending.........</p>
+                        <h5 class="mb-1">Arpita Sen</h5>
+                        <span class="fst-italic">Project Mentor 1</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src={{ url_for('static', filename='img/testimonial-2.png')}} style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Pending.........</p>
+                        <h5 class="mb-1">Deepjyoti Choudhury</h5>
+                        <span class="fst-italic">Project Mentor 2</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src={{ url_for('static', filename='img/testimonial-3.png')}} style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Pending.........</p>
+                        <h5 class="mb-1">Swati Kumari</h5>
+                        <span class="fst-italic">Faculty, Class Co-ordinator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+{% endblock body %}
+ 

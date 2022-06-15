@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-Login{% endblock title %}
+{% block body %}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-map-marker-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Address</p>
+                            <h5 class="mb-0">Techno India University, Salt Lake</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Mail Us Now</p>
+                            <h5 class="mb-0">ayushidas24@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Call Us Now</p>
+                            <h5 class="mb-0">+91-9330156106</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-5">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
+                        <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
+                        <p class="mb-4">Feel free to drop a mail in case you want to contact us for any given reason. Apart from reviews and feedbacks, open source collaborations are always welcomed warm heartedly! You can go to my github and continue with a pull request. Thank You!</p>
+                        <form method="POST" action="/login">
+                            {{ form.hidden_tag() }}
+                            <div class="form-group">
+                                {%if form.email.errors%}
+                                {{ form.email(class="form-control form-control-lg is-invalid", placeholder="Enter Email")}}
+                                <div class="invalid-feedback">
+                                  {%for error in form.email.errors%}
+                                    <span>{{error}}</span>
+                                  {%endfor%}
+                                </div> 
+                                {%else%}
+                                {{ form.email(class="form-control form-control-lg", placeholder="Enter Email")}}
+                                {%endif%}
+                            </div>
+                            <div class="form-group">
+                                {%if form.password.errors%}
+                                {{ form.password(class="form-control form-control-lg is-invalid", placeholder="Enter Password")}}
+                                <div class="invalid-feedback">
+                                  {%for error in form.password.errors%}
+                                    <span>{{error}}</span>
+                                  {%endfor%}
+                                </div> 
+                                {%else%}
+                                {{ form.password(class="form-control form-control-lg", placeholder="Enter Password")}}
+                                {%endif%}                                  
+                            </div>
+                            <div class="form-group">
+                                {{ form.submit(class="btn btn-outline-info")}}
+                            </div>
+                            <small class="text-muted ml-2">
+                                <a href="#">Forgot Password?</a>
+                            </small>
+                        </form>
+                        <small class="text-muted">
+                            Already have an account? Prefer signing In.
+                        </small>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100" style="min-height: 400px;">
+                        <iframe class="rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.086877458422!2d88.4260918150389!3d22.57585378518109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f970ae9a2e19b5%3A0x16c43b9069f4b159!2sTechno%20India%20University!5e0!3m2!1sen!2sin!4v1648196583865!5m2!1sen!2sin"
+                        frameborder="0" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+{% endblock body %}

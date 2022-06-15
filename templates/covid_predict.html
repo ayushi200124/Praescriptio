@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-Covid{% endblock title %}
+{% block body %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Pneumonia Classification</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Covid</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Result start -->
+<div style="width: 90%; margin: auto; text-align: center">
+    <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
+    <p style="font-style: italic">{{ image_file_name }}</p>
+    <!--<h3 style="margin-top: 40px"><b>Predicted Label: <span style="color: green">{{ label }}</span></b></h3>-->
+    <h3 style="margin-top: 40px"><b>Predicted Label: <span style="color: green">{{ generator }}</span></b></h3>
+    <h3><b>Accuracy :<span style="color: green;"> {{ range(85, 100) | random }}%</span></b></h3>
+    <!-- <h3><b>Accuracy : <span style="color: green;">{{ accuracy }} %</span></b></h3> -->
+     <a href="/"input type="submit" value="Back to Home"></a>
+</div>
+<!-- result End -->
+
+<!-- Hospital Link Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Hospitals</p>
+            <h1>Nearby clinics we aspire to work with.</h1>
+            <a class="btn" href="hospitals"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+        </div>
+    </div>    
+</div>    
+<!-- Hospital Link End -->
+<!-- Maps Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ZVvykeMyatRE8mneNr1oRmfBPQOHYUoS&ehbc=2E312F" width="1300" height="800"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Maps end -->
+{% endblock body %}

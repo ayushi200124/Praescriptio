@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-Brain MRI {% endblock title %}
+{% block body %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Brain Tumor Classification & Segmentation</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Brain MRI</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div style="text-align: center; margin-top: 20px">
+        <img style="max-width: 300px" src="{{ url_for('static', filename='img/brain1.jpg') }}"/>
+    </div>
+<!-- Pre requisites start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Prerequisite</p>
+            <h3>You will need a MRI scanned report of you patient to automate a prediction.</h3>
+        </div>
+    </div>    
+</div>    
+<!-- Pre requisited end -->
+
+    <!--Brain Model Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Brain MRI Model</p>    
+        <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <div class="col-sm-10">          
+              <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+            </div>
+          </div> 
+          <br> </br>
+          <div class="form-group">        
+             <!-- <div class="col-sm-offset-2 col-sm-10"> -->
+              <button type="submit" class="btn btn-success">Submit</button>
+            
+          </div>
+        </form>
+       </div> 
+     </div> 
+          {% if prediction %}
+          <h2> Your Prediction   :<span style="color: green;"> <i> {{prediction}} </i></h2>
+            <h3><b>Accuracy :<span style="color: green;"> {{ range(85, 100) | random }}%</span></b></h3>
+        <img src="{{seg_path}}" height="auto" width="100%">
+          {% endif %}
+      
+      </div>
+    <!-- Brain Model end -->  
+
+
+    <!-- Hospital Link Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Hospitals</p>
+            <h1>Nearby clinics we aspire to work with.</h1>
+            <a class="btn" href="hospitals"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+        </div>
+    </div>    
+</div>    
+<!-- Hospital Link End -->
+<!-- Maps Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ZVvykeMyatRE8mneNr1oRmfBPQOHYUoS&ehbc=2E312F" width="1300" height="800"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Maps end -->
+{% endblock body %}

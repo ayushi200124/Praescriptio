@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Praescriptio-disease-predicted {% endblock title %}
+{% block body %}
+   <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown"> Disease Predicted</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Disease Predicted</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src={{ url_for('static', filename='img/about-1.jpg') }} alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src={{ url_for('static', filename='img/about-2.jpg') }} alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Disease Predicted</p>
+                    <h1 class="mb-4">There are chances you may have
+                        {{disease[0]}}</h1>
+                    <p>Please do not panic!!! It is a very common type of disease and our healthcare is too advance to help you get the correct cure.</p>
+                    <p class="mb-4">You can follow few steps to make sure you feel healthy again. If you are not sure of our prediction, do give it another try.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Contact your nearest doctor.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Do not take any other drugs except the prescribed ones.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Try to maintain a healthy lifestyle.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Make sure you have enough access to water, food and sleep.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>If you have contagious disease, make sure to keep safe distance from others.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Keep check on some common parameters like your BMI, B.P, Oxygen Levels.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Suffering from any other diseases which are not mentioned in this project? Do write to us. We are happy to add them in our list.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="/">Check Again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+<!-- Hospital Link Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Hospitals</p>
+            <h1>New to the city? Find reputed hospitals here.</h1>
+            <a class="btn" href="hospitals"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+        </div>
+    </div>    
+</div>    
+<!-- Hospital Link End -->
+<!-- Maps Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ZVvykeMyatRE8mneNr1oRmfBPQOHYUoS&ehbc=2E312F" width="1300" height="800"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Maps end -->
+{% endblock body %}
